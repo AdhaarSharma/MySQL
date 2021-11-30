@@ -1,0 +1,9 @@
+SELECT 
+	o.order_id,
+	c.first_name,
+    sh.name as Shippers
+FROM orders o
+JOIN customers c
+	USING (customer_id)
+LEFT JOIN shippers sh
+	USING (shipper_id)
